@@ -1,5 +1,7 @@
 import prompt
 import random
+
+
 def game():
     name = prompt.string('May I have your name? ')
     print('Hello, ' + name + '!')
@@ -7,15 +9,15 @@ def game():
     i = 0
     end = 0
     while i < 20:
-        number1 = random.randint(1,10 )
-        number2 = random.randint(1,10) 
-        sum = number1 + number2 
+        number1 = random.randint(1, 10)
+        number2 = random.randint(1, 10)
+        sum = number1 + number2
         sum_game = str(number1) + ' + ' + str(number2)
-        subtraction = max(number1,number2) - min(number1,number2)
+        subtraction = max(number1, number2) - min(number1, number2)
         multiplication = number1 * number2
         multiplication_game = str(number1) + ' * ' + str(number2)
-        subtraction_game = str(max(number1,number2)) + ' - ' + str(min(number1,number2))
-        chois = random.randint(1,3)
+        subtraction_game = str(max(number1, number2)) + ' - ' + str(min(number1, number2))
+        chois = random.randint(1, 3)
         if chois == 1:
             game = sum_game
         if chois == 2:
@@ -34,7 +36,7 @@ def game():
             end += 1
             print('Correct!')
         if str(answer) != str(ans):
-            return print(str(ans) + ' is wrong answer ;(. Correct answer was ' +  str(answer) + '.'"\nLet's try again," + name + '!')
+            return print(str(ans) + ' is wrong answer ;(. Correct answer was ' + str(answer) + '.'"\nLet's try again," + name + '!')
         if end == 3:
             return print('Congratulations, ' + name + '!')
         i += 1
